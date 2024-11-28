@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Item Upload</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #EEEEEE; /* Light background for university theme */
+        }
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 500px; /* Set a fixed width for consistency */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        label {
+            font-weight: 600;
+            color: #333;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ced4da; /* Light gray borders */
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #495057;
+        }
+        input[type="file"] {
+            padding: 3px; /* File input needs less padding */
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #133E87; /* UPTM-themed primary color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn-submit:hover {
+            background-color: #608BC1; /* Darker blue on hover */
+        }
+        h2 {
+            font-size: 24px;
+            color: #133E87;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        /* Homepage Button Styling */
+        .home-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #8000ff; /* Matching the theme color */
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .home-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+            background-color: #5a00cc;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <h2>Upload Lost Item</h2>
+        <table>
+            <tr>
+                <td><label for="item-type">Item Type:</label></td>
+                <td><input type="text" name="item_type" id="item-type" placeholder="e.g., Phone, Wallet" required></td>
+            </tr>
+            <tr>
+                <td><label for="place-found">Place Found:</label></td>
+                <td><input type="text" name="place_found" id="place-found" placeholder="e.g., Library, Cafeteria" required></td>
+            </tr>
+            <tr>
+                <td><label for="security-question">Security Question:</label></td>
+                <td>
+                    <select name="security_question" id="security-question" required>
+                        <option value="" disabled selected>Select a security question</option>
+                        <option value="color">What is the color of the item?</option>
+                        <option value="brand">What is the brand or make?</option>
+                        <option value="distinct">Any distinct marks?</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="answer">Your Answer:</label></td>
+                <td><input type="text" name="answer" id="answer" placeholder="Your answer" required></td>
+            </tr>
+            <tr>
+                <td><label for="contact">Contact Information:</label></td>
+                <td><input type="text" name="contact_info" id="contact" placeholder="Phone number or email" required></td>
+            </tr>
+            <tr>
+                <td><label for="file-upload">Upload an image (jpg, jpeg, png):</label></td>
+                <td><input type="file" name="my_image" id="file-upload" accept=".jpg,.jpeg,.png" required></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" name="submit" value="Upload" class="btn-submit">
+    </form>
+    <a href="index.html" class="home-button">
+        <i class="fas fa-home"></i>
+    </a>
+</body>
+</html>

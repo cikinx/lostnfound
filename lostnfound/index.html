@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPTM Homepage</title>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css">
+    
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f2f2ff;
+        }
+        .poppins-semibold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+        /* Sidebar Styling */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #011a41;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .clock {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .sidebar h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #8000ff;
+            text-align: center;
+            font-weight: bold;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar ul li a i {
+            margin-right: 10px;
+            font-size: 1.4rem;
+        }
+        .sidebar ul li a:hover {
+            background-color: #8000ff;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Content Area */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        /* Center the image */
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 30%;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            background-image: url('university-campus.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            position: relative;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #16181b;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #16181b;
+            font-family: 'Poppins', sans-serif;
+        }
+        .cta-button {
+            background-color: #8000ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Feature Section */
+        .feature-section {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        /* Carousel Styling */
+        .carousel-item {
+            padding: 20px;
+            background-color: #f0f0f5;
+            border-radius: 8px;
+        }
+
+        .carousel-item h4 {
+            color: #8000ff;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: #f0f0f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        .about-section h3 {
+            color: #8000ff;
+            font-size: 1.8rem;
+        }
+        .about-section p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #011a41;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <br>
+        <div class="clock" id="clock"></div> <!-- Digital Clock -->
+        <h1>MENU</h1>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-tv"></i> Home</a></li>
+            <li><a href="view_profile.php"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="view.php"><i class="fas fa-bars"></i>Lost Items</a></li>
+            <li><a href="upload.html"><i class="fas fa-folder"></i>Upload</a></li>
+            <li><a href="faq.html"><i class="fas fa-comments"></i> FAQ</a></li>
+            <li><a href="mlogin.php"><i class="fas fa-cogs"></i> Admin</a></li>
+        </ul>
+        <footer>
+            <p>&copy; 2024 UPTM | All Rights Reserved</p>
+        </footer>
+    </div>
+    
+    <!-- Content Area -->
+    <div class="content">
+        <br>
+        <img src="uptmlogo.png" class="center">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div>
+                <h2>Welcome to UPTM Lost & Found Online Portal</h2>
+                <p>Your gateway to university resources and updates</p>
+                <button class="cta-button" onclick="window.location.href='learnmore.html'">Learn More</button>
+
+            </div>
+        </div>
+
+        <!-- Feature Section: Latest Announcements -->
+        <div class="feature-section">
+            <h3>Latest Announcements</h3>
+
+            <!-- Bootstrap Carousel -->
+            <div id="announcementCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="announcement-box">
+                            <h4>Orientation Week</h4>
+                            <p>New student orientation starts on October 25th</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="announcement-box">
+                            <h4>Graduation Ceremony</h4>
+                            <p>Join us for the 2024 graduation ceremony on November 15th</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="announcement-box">
+                            <h4>Library Hours Extended</h4>
+                            <p>The campus library is now open 24/7</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#announcementCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#announcementCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- About Section -->
+        <div class="about-section">
+            <h3>About UPTM</h3>
+            <p>UPTM is a leading institution dedicated to providing high-quality education and innovative research. Our mission is to empower students with the knowledge and skills needed to excel in a rapidly changing world.</p>
+        </div>
+       
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Clock JavaScript -->
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000); // Update clock every second
+        updateClock(); // Initial call to display clock immediately
+    </script>
+</body>
+</html>

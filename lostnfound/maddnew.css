@@ -1,0 +1,87 @@
+/* CSS for add_admin.php */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f3f5; /* Light background */
+}
+
+.container {
+    width: 560px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+h1.form-title {
+    font-size: 24px;
+    color: #2c3e50; /* Dark blue color */
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #2c3e50;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 500px;
+    padding: 10px 10px 10px 40px;
+    font-size: 16px;
+    border: 2px solid #2c3e50; /* Border color matches icon */
+    border-radius: 5px;
+    color: #495057; /* Darker gray for text */
+    background-color: #f8f9fa; /* Slightly light background inside input */
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #2c3e50; /* Deep blue for button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #34495e; /* Darker shade on hover */
+}
+
+a {
+    text-decoration: none;
+    color: #2c3e50; /* Match with form color */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+label {
+    display: none; /* Hide labels, as placeholder text acts as labels */
+}
+
+p {
+    color: #e74c3c; /* Error or success message in red */
+    font-weight: bold;
+}

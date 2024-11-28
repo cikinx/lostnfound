@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Item Upload</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa; /* Light background for university theme */
+        }
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 500px; /* Set a fixed width for consistency */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        label {
+            font-weight: 600;
+            color: #333;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ced4da; /* Light gray borders */
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #495057;
+        }
+        input[type="file"] {
+            padding: 3px; /* File input needs less padding */
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff; /* UPTM-themed primary color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn-submit:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        h2 {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="mupload.php" method="post" enctype="multipart/form-data">
+        <h2>Upload Lost Item</h2>
+        <table>
+            <tr>
+                <td><label for="item-type">Item Type:</label></td>
+                <td><input type="text" name="item_type" id="item-type" placeholder="e.g., Phone, Wallet" required></td>
+            </tr>
+            <tr>
+                <td><label for="place-found">Place Found:</label></td>
+                <td><input type="text" name="place_found" id="place-found" placeholder="e.g., Library, Cafeteria" required></td>
+            </tr>
+            <tr>
+                <td><label for="security-question">Security Question:</label></td>
+                <td>
+                    <select name="security_question" id="security-question" required>
+                        <option value="" disabled selected>Select a security question</option>
+                        <option value="color">What is the color of the item?</option>
+                        <option value="brand">What is the brand or make?</option>
+                        <option value="distinct">Any distinct marks?</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="answer">Your Answer:</label></td>
+                <td><input type="text" name="answer" id="answer" placeholder="Your answer" required></td>
+            </tr>
+            <tr>
+                <td><label for="contact">Contact Information:</label></td>
+                <td><input type="text" name="contact_info" id="contact" placeholder="Phone number or email" required></td>
+            </tr>
+            <tr>
+                <td><label for="file-upload">Upload an image (jpg, jpeg, png):</label></td>
+                <td><input type="file" name="my_image" id="file-upload" accept=".jpg,.jpeg,.png" required></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" name="submit" value="Upload" class="btn-submit">
+    </form>
+</body>
+</html>

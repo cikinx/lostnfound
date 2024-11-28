@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More | UPTM Lost & Found</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f2f2ff;
+        }
+        .poppins-semibold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+        /* Header */
+        .header {
+            background-color: #011a41;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            color: #8000ff;
+        }
+
+        /* Content Area */
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #8000ff;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .content-section, .high-value, .not-accepted {
+            background-color: #fff;
+            border: 2px solid #8000ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Button */
+        .cta-button {
+            background-color: #8000ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .cta-button:hover {
+            background-color: #4e00b8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #011a41;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+         /* Homepage Button Styling */
+         .home-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #8000ff; /* Matching the theme color */
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .home-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+            background-color: #5a00cc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>UPTM Lost & Found Portal</h1>
+        <p>Helping you recover your lost belongings easily</p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>How Does It Work?</h2>
+        <div class="content-section">
+            <p>The UPTM Lost & Found portal is designed to help students and staff report and recover lost items within the university campus.</p>
+            <p>Whether you lost something or found someone else’s belongings, you can report it through this portal, and we’ll do our best to help you.</p>
+            <a href="upload.html" class="cta-button">Report a Lost Item</a>
+        </div>
+
+        <h2>How to Use the Portal</h2>
+        <div class="content-section">
+            <p><strong>Step 1:</strong> Create an account or log in with your university credentials.</p>
+            <p><strong>Step 2:</strong> If you’ve lost something, navigate to the "Lost Items" section and fill out a report.</p>
+            <p><strong>Step 3:</strong> If you’ve found something, upload the details and location in the "Upload" section.</p>
+            <p><strong>Step 4:</strong> Check back periodically or receive notifications if your item is found.</p>
+        </div>
+
+        <h2>High-Valued Items</h2>
+        <div class="high-value">
+            <p>All the following items will be surrendered to the University Union Department immediately:</p>
+            <ul>
+                <strong>1. Any item presumed to be stolen</strong>
+                <br>
+                <strong>2. Cash</strong>
+                <br>
+                <strong>3. Government Issued Identification, Passports, Visas, etc.</strong>
+                <br>
+                <strong>4. High Value Items.  (e.g., jewelry, laptops, debit/credit cards, electronics)</strong>
+                <br>
+                <strong>5. Student ID Cards</strong>
+                <br>
+                <strong>6. Keys</strong>
+            </ul>
+        </div>
+
+        <h2>Items Not Accepted</h2>
+        <div class="not-accepted">
+            <p>We do not accept the following types of items:</p>
+            <ul>
+                <strong>1. Items that are soiled, unsanitary, or have no apparent value</strong></li>
+                <br>
+                <strong>2. Food</strong>
+                <br>
+                <strong>3. Pens, pencils, etc.</strong>
+            </ul>
+            <a href="index.html" class="home-button">
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+    
+
+    <!-- Footer Section -->
+    
+        <p>&copy; 2024 UPTM | All Rights Reserved</p>
+   
+</body>
+</html>

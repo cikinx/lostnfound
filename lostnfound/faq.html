@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./faq.css">
+</head>
+<body>
+   
+    <section class="faq-container">
+        <h2 class="title">FAQs</h2>
+
+        <div class="faq">
+            <div class="question">
+            <h3>How do I report a lost item using the Lost and Found system?</h3>
+            </div>
+            <p>
+                To report a lost item, log in to the Lost and Found system using your campus credentials. 
+                Navigate to the "Report Lost Item" section and provide a detailed description of the item, 
+                including any distinguishing features, the approximate location it was lost, and the date. 
+                You can also upload photos if available. Once submitted, you'll be notified if a matching item is found.
+            </p>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+            <h3>What should I do if I find someone else’s lost item?</h3>
+            </div>
+            <p>
+                If you find a lost item, you can report it anonymously or through your account by visiting the "Report Found Item" section. 
+                Provide details such as where and when you found the item, and include a description or photos. 
+                The Lost and Found team will handle the rest, and the owner will be notified if it matches their report.
+            </p>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+            <h3>How can I search for items that have been found?</h3>
+            </div>
+            <p>
+                After logging in, go to the "Browse Found Items" section. You can search by item category, location, or keywords. 
+                The listings will display detailed descriptions and photos to help you identify your lost item. 
+                If you see an item that matches yours, follow the instructions to claim it.
+            </p>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+            <h3>How long are lost items kept in the system?</h3>
+            </div>
+            <p>
+                Items reported in the Lost and Found system are kept for up to 90 days. 
+                After this period, unclaimed items may be donated, recycled, or otherwise handled according to campus policy. 
+                Be sure to regularly check the system or the physical Lost and Found location if you are missing something.
+            </p>
+        </div>
+
+    </section>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f2f2ff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            color: #8000ff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .faq {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq .question h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #8000ff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .faq-container {
+            max-height: 80vh;
+            max-width: 800px; /* Set a max-width to control width */
+            width: 100%; /* Ensures it doesn't exceed the container */
+            margin: 0 auto; /* Centers the container horizontally */
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .faq-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .faq-container::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 3px;
+        }
+
+        .faq-container::-webkit-scrollbar-track {
+            background-color: #f2f2ff;
+        }
+         /* Homepage Button Styling */
+         .home-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #8000ff; /* Matching the theme color */
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .home-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+            background-color: #5a00cc;
+        }
+    </style>
+        <a href="index.html" class="home-button">
+            <i class="fas fa-home"></i>
+        </a>
+</body>
+</html>
